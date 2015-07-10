@@ -51,7 +51,7 @@ public class BasicChaosMonkeyContext extends BasicSimianArmyContext implements C
         setChaosCrawler(new ASGChaosCrawler(awsClient()));
         setChaosInstanceSelector(new BasicChaosInstanceSelector());
         MonkeyConfiguration cfg = configuration();
-        setChaosEmailNotifier(new BasicChaosEmailNotifier(cfg, new AmazonSimpleEmailServiceClient(), null));
+        setChaosEmailNotifier(new BasicChaosEmailNotifier(cfg, new AmazonSimpleEmailServiceClient(awsClientConfig), null));
     }
 
     /** {@inheritDoc} */

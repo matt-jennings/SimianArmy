@@ -87,7 +87,7 @@ public class BasicSimianArmyContext implements Monkey.Context {
 
     private final String region;
 
-    private ClientConfiguration awsClientConfig = new ClientConfiguration();
+    protected ClientConfiguration awsClientConfig = new ClientConfiguration();
 
     /* If configured, the proxy to be used when making AWS API requests */
     private final String proxyHost;
