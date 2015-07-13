@@ -122,7 +122,7 @@ public class BasicSimianArmyContext implements Monkey.Context {
         proxyPort = config.getStr("simianarmy.client.aws.proxyPort");
         proxyUsernaem = config.getStr("simianarmy.client.aws.proxyUser");
         proxyPassword = config.getStr("simianarmy.client.aws.proxyPassword");
-        if ((proxyHost != null) && (proxyPort != null)) {
+        if ((proxyHost != null && !proxyHost.trim().isEmpty()) && (proxyPort != null && !proxyPort.trim().isEmpty())) {
             awsClientConfig.setProxyHost(proxyHost);
             awsClientConfig.setProxyPort(Integer.parseInt(proxyPort));
             if ((proxyUsernaem != null) && (proxyPassword != null)) {
